@@ -78,13 +78,13 @@ async def progress(current, total, event, start, type_of_ps, file=None):
         speed = current / diff
         time_to_completion = round((total - current) / speed) * 1000
         progress_str = "{0}{1}** {2}%**\n\n".format(
-            "".join(["■" for i in range(math.floor(percentage / 10))]),
-            "".join(["□" for i in range(10 - math.floor(percentage / 10))]),
+            "".join(["▓" for i in range(math.floor(percentage / 10))]),
+            "".join(["░" for i in range(10 - math.floor(percentage / 10))]),
             round(percentage, 2),
         )
         tmp = (
             progress_str
-            + "**✅ Progress:** {0} \n\n**📁 Total Size:** {1}\n\n**🚀 Speed:** {2}/s\n\n**⏰ Time Left:** {3}\n".format(
+            + "**⚡ ᴘʀᴏɢʀᴇss:** {0} \n\n**📁 ᴛᴏᴛᴀʟ sɪᴢᴇ:** {1}\n\n**🚀 sᴘᴇᴇᴅ:** {2}/s\n\n**⏰ ᴛɪᴍᴇ.ʟᴇғᴛ:** {3}\n".format(
                 hbs(current),
                 hbs(total),
                 hbs(speed),
@@ -241,7 +241,7 @@ async def fast_download(e, download_url, filename=None):
         return (
             asyncio.get_event_loop().create_task(
                 progress(
-                    f"**📥 Downloading video from {download_url}**",
+                    f"**⚡ ᴅᴏᴡɴʟᴏᴀᴅɪɴɢ ᴠɪᴅᴇᴏ ғʀᴏᴍ {download_url}**",
                 )
             ),
         )
