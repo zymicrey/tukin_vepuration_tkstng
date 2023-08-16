@@ -200,7 +200,7 @@ async def something():
                 hehe = f"{out};{dl};{list(QUEUE.keys())[0]}"
                 wah = code(hehe)
                 nn = await e.edit(
-                    "**⚡ ᴄᴏᴍᴘʀᴇssɪɴɢ...**",
+                    "**⚡ ᴄᴏᴍᴘʀᴇssɪɴɢ ɪɴ ᴘʀᴏɢʀᴇss...**",
                     buttons=[
                         [Button.inline("⚡ ᴄʜᴇᴄᴋ ᴘʀᴏɢʀᴇss", data=f"stats{wah}")],
                         [Button.inline("❌ ᴄᴀɴᴄᴇʟ ᴘʀᴏᴄᴇss", data=f"skip{wah}")],
