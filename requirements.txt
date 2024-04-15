@@ -9,6 +9,5 @@ lxml_html_clean
 pytz
 requests
 shortzy
-aiohttp
 aiofiles
 asyncio
